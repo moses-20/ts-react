@@ -1,7 +1,6 @@
 import { styled } from "@mui/material";
 
 const Main = styled("main")(({ theme }) => ({
-  display: "flex",
   flex: 1,
   overflow: "hidden",
   paddingTop: "64px",

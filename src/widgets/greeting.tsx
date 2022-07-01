@@ -1,10 +1,22 @@
-import { Box, Typography } from "@mui/material";
+import { Button, Paper } from "@mui/material";
+import { Typography } from "@mui/material";
 
 function Greeting() {
   return (
-    <Box>
-      <Typography variant="h1">Hello Shopa</Typography>
-    </Box>
+    <Paper
+      square
+      variant="outlined"
+      sx={{
+        maxWidth: "700px",
+        margin: "auto",
+      }}
+    >
+      <Typography variant="h1" textAlign="center">
+        Hello Shopa
+      </Typography>
+
+      <Button variant="contained"> Let's Go </Button>
+    </Paper>
   );
 }
 

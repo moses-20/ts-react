@@ -1,40 +1,35 @@
 import { ThemeOptions } from "@mui/material";
 
 type Palette = ThemeOptions["palette"] & {
-  text: {
-    secondary: string;
-    danger: string;
-  };
-  danger: {
+  tertiary: {
     main: string;
     light: string;
+    dark: string;
   };
 };
 
 const palette: Palette = {
   primary: {
-    main: "#03c9d7",
-    light: "#e5fafb",
-    dark: "#05b2bd",
-    contrastText: "#ffffff",
+    main: "#00a854",
+    light: "#55db82",
+    dark: "#007828",
   },
 
   secondary: {
-    main: "#fb9678",
-    light: "#fcf1ed",
-    dark: "#e67e5f",
-    contrastText: "#ffffff",
+    main: "#ef5f22",
+    light: "#ff9050",
+    dark: "#b52c00",
+  },
+
+  tertiary: {
+    main: "#ffb727",
+    light: "#ffe95e",
+    dark: "#c78700",
   },
 
   success: {
     main: "#00c292",
     dark: "#00964b",
-    contrastText: "#ffffff",
-  },
-
-  danger: {
-    main: "#e46a76",
-    light: "#fdf3f5",
   },
 
   info: {
@@ -50,29 +45,12 @@ const palette: Palette = {
   warning: {
     main: "#fec90f",
     dark: "#dcb014",
-    contrastText: "#ffffff",
-  },
-
-  text: {
-    secondary: "#777e89",
-    danger: "#fc4b6c",
-  },
-
-  grey: {
-    A100: "#ecf0f2",
-    A200: "#99abb4",
-    A400: "#767e89",
-    A700: "#e6f4ff",
   },
 
   action: {
     disabledBackground: "rgba(73,82,88,0.12)",
     hoverOpacity: 0.02,
     hover: "rgba(0, 0, 0, 0.03)",
-  },
-
-  background: {
-    default: "#fafbfb",
   },
 };
 
