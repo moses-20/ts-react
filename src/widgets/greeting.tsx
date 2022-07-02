@@ -16,6 +16,7 @@ function Greeting() {
       </Typography>
 
       <Button variant="contained"> Let's Go </Button>
+      <Button variant="text"> Let's Go </Button>
     </Paper>
   );
 }
