@@ -1,17 +1,6 @@
 import { ThemeOptions } from "@mui/material";
 
-type Components = ThemeOptions["components"] & {
-  MuiGridItem: {
-    styleOverrides: {
-      root: {
-        paddingTop: string;
-        paddingLeft: string;
-      };
-    };
-  };
-};
-
-const components: Components = {
+const components: ThemeOptions["components"] = {
   MuiContainer: {
     styleOverrides: {
       root: {
@@ -23,14 +12,23 @@ const components: Components = {
   },
 
   MuiButton: {
+    defaultProps: {
+      disableRipple: true,
+    },
+
     styleOverrides: {
-      root: {
+      root: ({ ownerState, theme }) => ({
+        minWidth: 150,
         textTransform: "none",
         boxShadow: "none",
         "&:hover": {
           boxShadow: "none",
         },
-      },
+
+        ...(ownerState.variant === "contained" && {
+          backgroundImage: `linear-gradient(130deg, ${theme.palette.primary.light}, black)`,
+        }),
+      }),
     },
   },
 
@@ -57,15 +55,6 @@ const components: Components = {
     styleOverrides: {
       root: {
         minWidth: "40px",
-      },
-    },
-  },
-
-  MuiGridItem: {
-    styleOverrides: {
-      root: {
-        paddingTop: "20px",
-        paddingLeft: "20px !important",
       },
     },
   },
