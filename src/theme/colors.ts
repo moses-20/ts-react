@@ -1,32 +1,6 @@
 import { ThemeOptions } from "@mui/material";
 
-type Palette = ThemeOptions["palette"] & {
-  tertiary: {
-    main: string;
-    light: string;
-    dark: string;
-  };
-};
-
-const palette: Palette = {
-  primary: {
-    main: "#00a854",
-    light: "#55db82",
-    dark: "#007828",
-  },
-
-  secondary: {
-    main: "#ef5f22",
-    light: "#ff9050",
-    dark: "#b52c00",
-  },
-
-  tertiary: {
-    main: "#ffb727",
-    light: "#ffe95e",
-    dark: "#c78700",
-  },
-
+const palette: ThemeOptions["palette"] = {
   success: {
     main: "#00c292",
     dark: "#00964b",
